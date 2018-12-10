@@ -34,8 +34,6 @@ echo " TARGET_HOST = ${TARGET_HOST}"
 
 cd ${SOURCE_DIRECTORY}
 mkdir --parents ${BUILD_DIRECTORY}
-autoreconf -fiv
-# export NOCONFIGURE=1
 ${SOURCE_DIRECTORY}/autogen.sh
 cd ${BUILD_DIRECTORY}
 
@@ -44,6 +42,10 @@ echo "${CONFIGURE_CMD}"
 ${CONFIGURE_CMD}
 
 # only make the library, not the programs
-cd src
+cd ${BUILD_DIRECTORY}/src
+
+echo "make"
 make
+
+echo "make install-strip"
 make install-strip
