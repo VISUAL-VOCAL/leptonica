@@ -147,9 +147,9 @@ typedef uintptr_t l_uintptr_t;
  */
 #define  USE_BMPIO        1
 #define  USE_PNMIO        1
-#define  USE_JP2KHEADER   1
-#define  USE_PDFIO        1
-#define  USE_PSIO         1
+#define  USE_JP2KHEADER   0
+#define  USE_PDFIO        0
+#define  USE_PSIO         0
 
 
 /*-------------------------------------------------------------------------*
